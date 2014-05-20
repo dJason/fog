@@ -1,13 +1,14 @@
 require 'fog/core/collection'
-require 'fog/digitalocean/models/compute/region'
+require 'fog/centurylink/models/compute/region'
 
 module Fog
   module Compute
-    class DigitalOcean
+    class CenturyLink
 
       class Regions < Fog::Collection
-        model Fog::Compute::DigitalOcean::Region
+        model Fog::Compute::CenturyLink::Region
 
+# TODO
         def all
           load service.list_regions.body['regions']
         end

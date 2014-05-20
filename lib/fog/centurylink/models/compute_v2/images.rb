@@ -1,13 +1,14 @@
 require 'fog/core/collection'
-require 'fog/digitalocean/models/compute/image'
+require 'fog/centurylink/models/compute_v2/image'
 
 module Fog
   module Compute
-    class DigitalOcean
+    class CenturyLinkV2
 
       class Images < Fog::Collection
-        model Fog::Compute::DigitalOcean::Image
+        model Fog::Compute::CenturyLinkV2::Image
 
+# TODO
         def all
           load service.list_images.body['images']
         end

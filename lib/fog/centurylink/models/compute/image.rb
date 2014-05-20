@@ -2,9 +2,10 @@ require 'fog/core/model'
 
 module Fog
   module Compute
-    class DigitalOcean
+    class CenturyLink
       class Image < Fog::Model
-        
+
+        # TODO
         identity  :id
         attribute :name
         attribute :distribution
