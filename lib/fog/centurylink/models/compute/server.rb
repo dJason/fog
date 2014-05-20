@@ -5,7 +5,6 @@ module Fog
     class CenturyLink
 
       class Server < Fog::Compute::Server
-{"ID"=>1035, "HardwareGroupID"=>3157, "Location"=>"VA1",  "Name"=>"VA1LGSBR1XYZ01", "Description"=>"test-broker_30ea31xyz", "DnsName"=>"VA1LGSBR1XYZ01", "IsHyperscale"=>false, "IsTemplate"=>false, "Cpu"=>1, "MemoryGB"=>1, "DiskCount"=>3, "TotalDiskSpaceGB"=>16, "Status"=>"Active", "PowerState"=>"Started", "InMaintenanceMode"=>false, "IPAddress"=>"10.125.202.15", "ServerType"=>1, "ServiceLevel"=>2, "OperatingSystem"=>31, "DateModified"=>"/Date(1400537381357)/", "ModifiedBy"=>"ad9f36714fd44712b0f8d688eed01f81", "IPAddresses"=>[{"Address"=>"10.125.202.15", "AddressType"=>"RIP"}, {"Address"=>"206.128.152.74", "AddressType"=>"MIP"}], "CustomFields"=>nil}
 
         identity  :id
         attribute :hardware_group_id

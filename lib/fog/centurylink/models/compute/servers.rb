@@ -7,7 +7,7 @@ module Fog
 
       class Servers < Fog::Collection
 
-        model Fog::Compute::DigitalOcean::Server
+        model Fog::Compute::CenturyLink::Server
 
         def all(filters = {})
           data = service.get_all_servers.body['Servers']
