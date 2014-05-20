@@ -33,9 +33,9 @@ module Fog
         attribute :password
 
         def initialize(attributes={})
-          cpu ||= 1
-          memory_gb ||= 1
-          operating_system ||= 31 # Ubuntu 12 64-Bit
+          self.cpu ||= 1
+          self.memory_gb ||= 1
+          self.operating_system ||= 31 # Ubuntu 12 64-Bit
           super
         end
 
@@ -62,7 +62,7 @@ module Fog
         end
 
         def get_password
-          password = service.get_server_credentials(:Name => server).body["Password"]
+          password = service.get_server_credentials(:name => name).body["Password"]
         end
 
         def reboot(type = 'SOFT')
