@@ -7,7 +7,7 @@ module Fog
         # {CenturyLink API Reference}[https://t3n.zendesk.com/entries/21271443-Add-Public-IP-Address]
         def add_public_ip_address(options)
           data = {}
-          data['AccountAlias'] = @account_alias
+          data['AccountAlias'] = options[:account_alias]
           data['ServerName'] = options[:name]
           data['IPAddress'] = options[:ip_address] if options[:ip_address]
           data['ServerPassword'] = options[:server_password] if options[:server_password]

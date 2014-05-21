@@ -106,6 +106,10 @@ module Fog
           end
         end
 
+        def account_alias
+          @account_alias
+        end
+
       private
 
         def do_logon

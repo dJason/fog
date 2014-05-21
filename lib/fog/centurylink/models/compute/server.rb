@@ -65,6 +65,18 @@ module Fog
           password = service.get_server_credentials(:name => name).body["Password"]
         end
 
+        def add_public_ip_address(options = {})
+          opts = {
+            :account_alias => service.account_alias,
+            :name => name,
+            :ip_address => ip_address,
+            :allow_http => true,
+            :allow_https => true,
+            :allow_ssh => true
+          }.merge(options)
+          service.add_public_ip_address(opts).body["RequestID"]
+        end
+
         def reboot(type = 'SOFT')
           # TODO
           true
