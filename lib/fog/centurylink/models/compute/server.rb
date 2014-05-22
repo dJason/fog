@@ -62,7 +62,7 @@ module Fog
         end
 
         def get_password
-          password = service.get_server_credentials(:name => name).body["Password"]
+          self.password = service.get_server_credentials(:name => name).body["Password"]
         end
 
         def add_public_ip_address(options = {})

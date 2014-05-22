@@ -97,6 +97,10 @@ module Fog
           end
         end
 
+        def account_alias
+          @account_alias
+        end
+
       private
 
         def do_login
@@ -108,7 +112,7 @@ module Fog
         # Actually do the request
         def do_request(params)
 
-          # Make the request, all requests use POST method and expect a 200 response code
+          # Make the request
           response = @connection.request({
             :body     => params[:body] || '',
             :expects  => params[:expects],
@@ -143,7 +147,7 @@ module Fog
         def request_path(resource, detail_path)
           path = "#{@centurylink_api_path}"
           path << "/#{resource}" if resource
-          path << "/#{@account_alias}" if @account_alias
+          path << "/#{account_alias}" if account_alias
           path << "/#{detail_path}"
         end
 
