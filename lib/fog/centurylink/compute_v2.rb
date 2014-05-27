@@ -26,19 +26,6 @@ module Fog
       request      :login
       request      :put_public_ip
 
-#      request      :add_public_ip_address
-#      request      :create_server
-#      request      :delete_server
-#      request      :get_all_servers
-#      request      :get_deployable_networks
-#      request      :get_deployment_status
-#      request      :get_groups
-#      request      :get_locations
-#      request      :get_network_details
-#      request      :get_server
-#      request      :get_servers
-#      request      :list_available_server_templates
-#      request      :logon
 
       class Mock
 # TODO none of this is validated
